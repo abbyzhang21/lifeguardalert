@@ -1,0 +1,42 @@
+{{>usernav}}
+{{!-- {{#each item}} --}}
+<div class='container'>
+    <h1>MAKAHA</h1>
+    <p id='description'>You lived before you met me?! Good man. Nixon's pro-war and pro-family</p>
+    <div class='alert_date'>
+        <h3>TODAY ALERTS</h3>
+        <h3>SEP 22, 2018 12:00 PM</h3>
+    </div>
+    <div class='alert-container'>
+        <div class="alert-item">
+            <img src="../img/{{id}}.png" class='icon' onclick="alert()">
+            <h3>Alert Name</h3>
+        </div>
+        <div class="alert-item">
+            <img src="../img/{{id}}.png" class='icon' onclick="alert()">
+            <h3>Alert Name</h3>
+        </div>
+        <div class="alert-item">
+            <img src="../img/{{id}}.png" class='icon' onclick="alert()">
+            <h3>Alert Name</h3>
+        </div>
+        <div id="alert_{{id}}" class='alert_detail'>
+            <h2>JELLY FISH</h2>
+            <div class='detail-container'>
+                <div class="detail_img"><img src="./img/danger.png" alt=""></div>
+                <div class='detail'>
+                    <h3>THE DANGER ZONE</h3>
+                    <P>We'll need to have a look inside you with thhis camera. interesting. </P>
+                </div>
+            </div>
+            <div class='detail-container'>
+                <div class="detail_img"><img src="./img/safety.png" alt=""></div>
+                <div class='detail'>
+                    <h3>SAFETY TIPS</h3>
+                    <P>We'll need to have a look inside you with thhis camera. interesting. </P>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- {{/each}} --}}
