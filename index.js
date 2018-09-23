@@ -2,6 +2,8 @@ const express = require('express')
 const app = express();
 const bp = require('body-parser')
 const exphbs = require('express-handlebars')
+const knex = require('./knex/knex.js');
+// const lifeguard = require('./lifeguard.js')
 
 const PORT = process.env.PORT || 5000
 
