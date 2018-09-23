@@ -1,3 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import 'normalize';
+$font_style : 'Montserrat', sans-serif;
+$red : #d00118;
+$charcoal : #4a4a4a;
+$orange : #ef851e;
+
 body{
-    background-color: pink
+    background-color: white;
+    font-family: $font_style;
+    font-size: 16px;
+    color: $charcoal;
+    margin: 0;
+
+}
+.invisible{
+    visibility: hidden;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+.container{
+    max-width: 505px;
+    width: 100%;
+    margin: 0 auto;
+}
+nav{
+    background-color: $red;
+    padding: 10px;
+    button{
+        background-color: white;
+        color: $red;
+        padding: 5px;
+        flex: 0 0 153px;
+        text-transform: uppercase;
+        font-size: 14px;
+
+    }
+    .wrapper{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+    }
+}
+.wrapper{
+    width: 100%;
+    max-width: 870px;
+    margin:0 auto;
+}
+.submit_btn{
+    background-color: $red;
+    color: white;
+    padding: 10px;
+    width: 100px;
+    font-size: 24px;
+}
+#home_img{
+    background-size:cover;
+}
+#beaches{
+    display: inline-block;
+    .list_item{
+        background-color: $charcoal;
+        height:200px;
+        width: 200px;
+    }
 }
