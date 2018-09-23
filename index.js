@@ -41,10 +41,10 @@ app.post('/beach_detail', (req, res) => {
     res.redirect('/beach_detail');
 })
 
-app.get('/index', (req, res) => {
-    res.render('index');
+// app.get('/index', (req, res) => {
+//     res.render('index');
 
-})
+// })
 
 
 app.listen(PORT, () => {
