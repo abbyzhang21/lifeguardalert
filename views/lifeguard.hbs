@@ -1,29 +1,63 @@
 {{>lifeguardnav}}
-<button onclick="setAlert()">Set Alert</button>
-<form action="/beach_detail" method='post'>
-    <div id="alertDiv">
-        <br>
-        <label class="checkbox">One
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-
-        <label class="checkbox">Two
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-
-        <label class="checkbox">Three
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-
-        <label class="checkbox">Four
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-        <label>
-            <input type="submit" name='=Complete' id=''>
-        </label>
+<div class="container beach-details">
+    <h2>Set Alert</h2>
+    <h1>Heleiwa</h1>
+    <p id='description'>Food Trucks and surfing for days</p>
+    <div class='alert-date'>
+        <h3>TODAY ALERTS</h3>
+        <h3>SEP 23, 2018 2:00 PM</h3>
     </div>
-</form>
+    <form action="/index" method='post'>
+        <div class="alert-container set-alert">
+            <div class="alert-item check-item">
+                <input type="checkbox" name="topic-box" id="alert-1">
+                <label for="alert-1" >
+                    <div class="check-success"></div>
+                    <img src="./img/shorebreak.png" alt="danger">
+                    <h3>shorebreak</h3>
+                </label>
+            </div>
+            <div class="alert-item check-item">
+                <input type="checkbox" id='alert-2' name="topic-box">
+                <label for="alert-2" >
+                    <div class="check-success"></div>
+                    <img src="./img/stingray.jpeg" alt="danger">
+                    <h3>stingray</h3>
+                </label>
+            </div>
+            <div class="alert-item check-item">
+                <input type="checkbox" name="topic-box" id="alert-3">
+                <label for="alert-3" >
+                    <div class="check-success"></div>
+                    <img src="./img/jellyfish.png" alt="danger">
+                    <h3>jellyfish</h3>
+                </label>
+            </div>
+            <div class="alert-item check-item">
+                <input type="checkbox" name="topic-box" id="alert-4">
+                <label for="alert-4" >
+                    <div class="check-success"></div>
+                    <img src="./img/lightning-icon.png" alt="danger">
+                    <h3>lightning</h3>
+                </label>
+            </div>
+            <div class="alert-item check-item">
+                <input type="checkbox" name="topic-box" id="alert-5">
+                <label for="alert-5" >
+                    <div class="check-success"></div>
+                    <img src="./img/heat.png" alt="danger">
+                    <h3>heat</h3>
+                </label>
+            </div>
+            <div class="alert-item check-item">
+                <input type="checkbox" name="topic-box" id="alert-6">
+                <label for="alert-6" >
+                    <div class="check-success"></div>
+                    <img src="./img/shark.png" alt="danger">
+                    <h3>shark</h3>
+                </label>
+            </div>
+        </div>
+        <input type="submit" name='=setAlert' class='submit_btn'>
+    </form>
+</div>

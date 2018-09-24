@@ -2,10 +2,10 @@ const express = require('express')
 const app = express();
 const bp = require('body-parser')
 const exphbs = require('express-handlebars')
-const knex = require('./knex/knex.js');
+// const knex = require('./knex/knex.js');
 // const lifeguard = require('./lifeguard.js')
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 8000
 
 app.use(express.static('public'))
 app.use(bp.urlencoded({ extended: true }))
@@ -42,6 +42,10 @@ app.post('/beach_detail', (req, res) => {
 })
 
 app.get('/index', (req, res) => {
+    res.render('index');
+
+})
+app.post('/index', (req, res) => {
     res.render('index');
 
 })

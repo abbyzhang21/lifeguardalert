@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,500i,600,600i,700,700i');
 @import 'normalize';
+// @import 'checkSelect';
 $font_style : 'Montserrat', sans-serif;
 $red : #d00118;
 $charcoal : #4a4a4a;
 $orange : #ef851e;
+
+a {
+    text-decoration: none;
+}
 
 body{
     background-color: white;
@@ -11,7 +16,9 @@ body{
     font-size: 16px;
     color: $charcoal;
     margin: 0;
-
+}
+p{
+    font-weight: 300;
 }
 .invisible{
     visibility: hidden;
@@ -19,6 +26,8 @@ body{
 h1{
     text-align: center;
     text-transform: uppercase;
+    margin: 0;
+    padding: 10px 0;
 }
 .container{
     max-width: 505px;
@@ -31,8 +40,9 @@ nav{
     button{
         background-color: white;
         color: $red;
-        padding: 5px;
-        flex: 0 0 153px;
+        padding: 15px 0;
+        flex: 0 0 auto;
+        width: 153px;
         text-transform: uppercase;
         font-size: 14px;
 
@@ -48,22 +58,214 @@ nav{
     width: 100%;
     max-width: 870px;
     margin:0 auto;
+    > h1{
+        padding-top: 30px;
+    }
 }
 .submit_btn{
     background-color: $red;
     color: white;
     padding: 10px;
-    width: 100px;
+    width: 100%;
     font-size: 24px;
 }
-#home_img{
-    background-size:cover;
-}
+
 #beaches{
-    display: inline-block;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: 100px;
     .list_item{
         background-color: $charcoal;
-        height:200px;
-        width: 200px;
+        height:230px;
+        flex: 0 0 auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin: 10px;
+        border-radius: 20px;
+        border: 1px solid white;
+
+        h2{
+            flex: 1 0 224px;
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0,0,0,0.4);
+            padding: 20px 10px;
+            text-align: center;
+        }
     }
 }
+
+.position-container {
+    width: 264px;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+
+.hero-container{
+    height: 375px;
+    width: 100%;
+    background-image: url('../img/main.png');
+    background-position: top;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+.beach-details{
+    padding: 30px 0;
+    h2{
+        text-align: center;
+        color: $red;
+        border-bottom: 1px solid $red;
+        text-transform: uppercase;
+    }
+    > p{
+        padding: 0 20px;
+    }
+    .alert-date{
+        margin-top: 15px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        padding: 0 10px;
+        h3{
+            flex: 0 0 auto;
+            font-size: 14px;
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+}
+
+.alert-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    .alert-item{
+        text-align: center;
+        flex: 0 0 auto;
+        border: 1px solid $orange;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        height: 164px;
+        img{
+            width: 120px;
+            height: 108px;
+        }
+        h3{
+            width: 120px;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+    }
+    .selected{
+        border: 3px solid $orange;
+        h3{
+            color: $orange;
+        }
+    }
+}
+
+.alert_detail{
+    display: none;
+    border: 3px solid $orange;
+    padding: 1em;
+    h2{
+        text-align: center;
+    }
+    .detail-container{
+        display: flex;
+        flex-flow: row nowrap;
+        .detail_img{
+            img{
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .detail{
+            padding-left: 20px;
+        }
+    }
+}
+
+.logo{
+    text-align: center;
+}
+
+.login{
+    padding-top: 30px;
+
+    .form{
+        padding-top: 50px;
+        label, input{
+            display: block;
+        }
+        input{
+            padding: 20px 0 20px 5px;
+            border: 1px solid $orange;
+            border-radius: 10px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.check-item{
+    input[type=checkbox]{
+      cursor: pointer;
+      display: none;
+  
+      & + label {
+        cursor:pointer;
+        width: 100%;
+        height: inherit;
+        border-radius: 3px;
+        display: inline-block;
+        padding: 25px 0 0;
+  
+        .check-success{
+          display: none;
+        }
+  
+        // img{
+        //   width: 100%;
+        //   height: inherit;
+        //   margin-bottom: 15px;
+        // }
+      }
+  
+      &:focus{
+        border-color: white;
+      }
+      &:checked + label{
+        .check-success{
+          margin: 0 auto 14px;
+          display: block;
+          background-image: url('../img/check.png');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 25px;
+          height:80px;
+          width: 100px;
+          background-color: #8CB85C;
+          border-radius: 50px;
+          padding-top: 20px;
+        }
+        img{
+          display: none;
+        }
+        opacity: 1;
+      }
+    }
+  }
+  
+  .set-alert{
+      margin-bottom: 50px;
+  }
