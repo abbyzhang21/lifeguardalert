@@ -46,6 +46,8 @@ app.post('/beach_detail', (req, res) => {
 
 // })
 
+app.use(`/beaches`, beaches);
+
 
 app.listen(PORT, () => {
     console.log(`Started app on port: ${PORT}`);
